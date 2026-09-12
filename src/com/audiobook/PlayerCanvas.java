@@ -51,6 +51,7 @@ public class PlayerCanvas extends Canvas implements CommandListener, BookPlayer.
         addCommand(sleepCmd);
         addCommand(exitCmd);
         setCommandListener(this);
+        try { setFullScreenMode(true); } catch (Throwable t) { }
     }
 
     /** Position at the given chapter/offset (paused) and begin ticking. */
@@ -262,9 +263,13 @@ public class PlayerCanvas extends Canvas implements CommandListener, BookPlayer.
             y += small.getHeight() + 4;
         }
 
-        // help at the bottom
+        // Help: pinned near the bottom when there's room, but never above the
+        // content (clamped so short screens can't overlap).
         g.setColor(0x777777);
         int hy = h - small.getHeight() * 3 - pad;
+        if (hy < y + 4) {
+            hy = y + 4;
+        }
         g.drawString("5/OK play   4/6 -/+30s", pad, hy, Graphics.TOP | Graphics.LEFT);
         hy += small.getHeight();
         g.drawString("2/8 chapter  */# vol  7 sleep", pad, hy, Graphics.TOP | Graphics.LEFT);
