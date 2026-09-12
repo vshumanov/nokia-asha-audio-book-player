@@ -30,7 +30,7 @@ dist/             built AudioBook.jar / AudioBook.jad (gitignored)
 
 ```sh
 ./convert.sh "/path/to/Book.m4b"          # one book
-./convert.sh --all "/path/to/Libation/Books"   # every .m4b under a folder
+./convert.sh --all "/path/to/books"       # every .m4b under a folder
 ```
 
 Output lands in `sdcard/audiobooks/<Title>/` as `0001.mp3 …` (48 kbps mono,
@@ -54,7 +54,7 @@ needed, so it works on Apple Silicon.
 Pop the card into a reader and copy **both**:
 
 1. The whole `sdcard/audiobooks` folder → to the **card root** (so the phone sees
-   `audiobooks/Caves of Ice/…`, `audiobooks/For the Emperor/…`).
+   `audiobooks/<Book Title>/…` for each book).
 2. `dist/AudioBook.jar` **and** `AudioBook.jad` → anywhere on the card.
 
 Put the card back, open **File Manager** on the phone, tap `AudioBook.jar`, and
