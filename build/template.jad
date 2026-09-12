@@ -1,0 +1,8 @@
+MIDlet-1: AudioBook, , com.audiobook.AudioBookMIDlet
+MIDlet-Name: AudioBook
+MIDlet-Vendor: mrc
+MIDlet-Version: 1.0.0
+MIDlet-Jar-URL: AudioBook.jar
+MIDlet-Jar-Size: @JAR_SIZE@
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

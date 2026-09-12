@@ -1,0 +1,19 @@
+// Compile-only stub for JSR-135 (MMAPI).
+package javax.microedition.media;
+
+public interface PlayerListener {
+    String STARTED = "started";
+    String STOPPED = "stopped";
+    String END_OF_MEDIA = "endOfMedia";
+    String DURATION_UPDATED = "durationUpdated";
+    String DEVICE_UNAVAILABLE = "deviceUnavailable";
+    String DEVICE_AVAILABLE = "deviceAvailable";
+    String VOLUME_CHANGED = "volumeChanged";
+    String SIZE_CHANGED = "sizeChanged";
+    String ERROR = "error";
+    String CLOSED = "closed";
+    String BUFFERING_STARTED = "bufferingStarted";
+    String BUFFERING_STOPPED = "bufferingStopped";
+
+    void playerUpdate(Player player, String event, Object eventData);
+}

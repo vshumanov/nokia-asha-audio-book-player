@@ -1,0 +1,9 @@
+# build output
+/out/
+/dist/
+
+# staged audio (large, regenerate with convert.sh)
+/sdcard/
+
+# downloaded toolchain jars (fetch with tools/fetch.sh)
+/tools/*.jar
